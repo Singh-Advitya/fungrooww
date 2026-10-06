@@ -1,0 +1,6 @@
+{
+  "name": "Funngro - Teen Freelance & Earning Platform",
+  "description": "Professional web platform for Funngro, enabling teens (ages 14-25) to earn their first income working on live projects from 5,000+ companies. Featured on Shark Tank India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
