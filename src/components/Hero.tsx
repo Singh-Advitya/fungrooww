@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, CheckCircle2, ShieldCheck, Sparkles, TrendingUp, Wallet, Star } from 'lucide-react';
 import { AudienceRole } from '../types';
 
@@ -84,15 +83,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenJoinModal, onExploreGigs }) =>
               <span className="text-slate-300">Over 60 Lakh Registered Youth</span>
             </div>
 
-            <AnimatePresence mode="wait">
+            <div className="transition-all duration-300 ease-out">
               {activeRole === 'teen' && (
-                <motion.div
-                  key="teen-copy"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <div key="teen-copy" className="animate-in fade-in slide-in-from-bottom-2 duration-300">
                   <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl font-display leading-[1.08] text-balance">
                     Earn your first income. <br />
                     <span className="bg-gradient-to-r from-amber-400 via-amber-200 to-emerald-400 bg-clip-text text-transparent">
@@ -102,17 +95,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenJoinModal, onExploreGigs }) =>
                   <p className="mt-6 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                     Work on paid live projects for 5,000+ top companies and hypergrowth startups. Design graphics, test new apps, create viral content, and build a verified career portfolio before finishing college.
                   </p>
-                </motion.div>
+                </div>
               )}
 
               {activeRole === 'company' && (
-                <motion.div
-                  key="company-copy"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <div key="company-copy" className="animate-in fade-in slide-in-from-bottom-2 duration-300">
                   <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl font-display leading-[1.08] text-balance">
                     Hire agile Gen-Z talent <br />
                     <span className="bg-gradient-to-r from-emerald-400 via-teal-200 to-amber-300 bg-clip-text text-transparent">
@@ -122,17 +109,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenJoinModal, onExploreGigs }) =>
                   <p className="mt-6 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                     Get authentic user feedback, UGC video reels, design assets, and beta testing from energetic digital natives. Milestone escrow guarantee with zero agency overhead.
                   </p>
-                </motion.div>
+                </div>
               )}
 
               {activeRole === 'parent' && (
-                <motion.div
-                  key="parent-copy"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <div key="parent-copy" className="animate-in fade-in slide-in-from-bottom-2 duration-300">
                   <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl font-display leading-[1.08] text-balance">
                     Financial independence <br />
                     <span className="bg-gradient-to-r from-sky-400 via-indigo-200 to-amber-300 bg-clip-text text-transparent">
@@ -142,9 +123,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenJoinModal, onExploreGigs }) =>
                   <p className="mt-6 text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                     Turn your teen’s screen time into productive life skills. Funngro ensures safe, verified brand projects with parental consent, structured mentorship, and financial literacy.
                   </p>
-                </motion.div>
+                </div>
               )}
-            </AnimatePresence>
+            </div>
 
             {/* Key trust bullets */}
             <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-y-2 gap-x-6 text-xs text-slate-400">
@@ -229,13 +210,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenJoinModal, onExploreGigs }) =>
                 </div>
 
                 {justSimulated && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="mt-3 rounded-lg border border-emerald-500/30 bg-emerald-500/10 p-2 text-center text-xs font-medium text-emerald-300"
+                  <div
+                    className="mt-3 rounded-lg border border-emerald-500/30 bg-emerald-500/10 p-2 text-center text-xs font-medium text-emerald-300 animate-in fade-in zoom-in-95 duration-200"
                   >
                     🎉 ₹1,500 Escrow Released! Transferred to bank account.
-                  </motion.div>
+                  </div>
                 )}
               </div>
 
